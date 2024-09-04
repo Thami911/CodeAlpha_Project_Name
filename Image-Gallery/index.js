@@ -1,31 +1,10 @@
-const images = [
-    'images/image1.jpg',
-    'images/image2.jpg',
-    'images/image3.jpg',
-    'images/image4.jpg',
-    'images/image5.jpg',
-    'images/image6.jpg'
-];
+document.querySelectorAll('.gallery-container img').forEach(image => {
+    image.onclick = () => {
+        document.querySelector('.image-popup').style.display = 'block';
+        document.querySelector('.image-popup img').src = image.getAttribute('src')
+    }
+});
 
-let currentIndex = 0;
-
-const galleryImage = document.getElementById('gallery-image');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-
-function updateImage() {
-    galleryImage.src = images[currentIndex];
+document.querySelector('.image-popup span').onclick = () => {
+    document.querySelector('.image-popup').style.display = 'none';
 }
-
-prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-    updateImage();
-});
-
-nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-    updateImage();
-});
-
-// Initialize the gallery with the first image
-updateImage();
