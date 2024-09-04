@@ -1,68 +1,18 @@
 const display = document.getElementById('display');
-let currentInput = '';
-let previousInput = '';
-let operation = null;
 
-function updateDisplay(value) {
-    display.innerText = value;
+function appendToDisplay(input) {
+    display.value += input;
 }
 
-function handleNumber(number) {
-    currentInput += number;
-    updateDisplay(currentInput);
-}
-
-function handleOperation(op) {
-    if (currentInput === '') return;
-    if (previousInput !== '') {
-        calculate();
-    }
-    operation = op;
-    previousInput = currentInput;
-    currentInput = '';
+function clearDisplay() {
+    display.value = "";
 }
 
 function calculate() {
-    let result;
-    const prev = parseFloat(previousInput);
-    const current = parseFloat(currentInput);
-
-    switch (operation) {
-        case '+':
-            result = prev + current;
-            break;
-        case '-':
-            result = prev - current;
-            break;
-        case '*':
-            result = prev * current;
-            break;
-        case '/':
-            result = prev / current;
-            break;
-        default:
-            return;
+    try{
+        display.value = eval(display.value);
     }
-    currentInput = result.toString();
-    operation = null;
-    previousInput = '';
-    updateDisplay(currentInput);
+    catch(error){
+        display.value = "Error";
+    }
 }
-
-document.querySelectorAll('.buttons button').forEach(button => {
-    button.addEventListener('click', () => {
-        const value = button.innerText;
-        if (!isNaN(value) || value === '.') {
-            handleNumber(value);
-        } else if (value === 'C') {
-            currentInput = '';
-            previousInput = '';
-            operation = null;
-            updateDisplay('0');
-        } else if (value === '=') {
-            calculate();
-        } else {
-            handleOperation(value);
-        }
-    });
-});
