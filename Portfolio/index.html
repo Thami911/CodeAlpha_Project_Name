@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>My Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" style="--i:1;" class="active">Home</a>
+            <a href="#about" style="--i:2;">About</a>
+            <a href="#services" style="--i:3;">Skills</a>
+            <a href="#portfolio" style="--i:4;">Portfolio</a>
+            <a href="#contact" style="--i:5;">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hey, It's Me</h3>
+            <h1>Thamsanqa Mncwabe</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>I use my frontend development skills to create responsive web pages and web applications, and with the right instructions I can do even more.</p>
+            <div class="social-media">
+                <a href="https://linkedin.com/in/thami-mncwabe-0bb47576/" style="--i:7"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Thami911" style="--i:8"><i class='bx bxl-github'></i></a>
+                <a href="https://twitter.com/thamza911" style="--i:9"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/thami_mncwabe/" style="--i:10"><i class='bx bxl-instagram-alt'></i></a>
+            </div>
+            <a href="https://drive.google.com/file/d/1oOAWVX4oFXHc9sH6FztlUrd6r2673pen/view?usp=drive_link" class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="home.jpg" alt="home image" />
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="about.jpg" alt="about image" />
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>A Frontend Developer</h3>
+            <p>
+                I am a talented frontend developer specializing in HTML, CSS, and JavaScript to create engaging user interfaces. With a passion for continuous learning, I'm actively expanding my skills in backend technologies, aiming to become a full-stack developer. My dedication and drive makes me a valuable asset to any development team.
+            </p>
+            <a href="#services" class="btn"><i class='bx bxs-user-detail'></i></a>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class="bx bx-code-alt"></i>
+                <h3>Web Development</h3>
+                <p>I'm a skilled web developer with over 1 years of hands-on experience in Front-End development, specializing in JavaScript and React.js. I have developed and maintained web applications using technologies like React.js, Vue.js and Next.js</p>
+                <i class='bx bxl-javascript'></i><i class='bx bxl-tailwind-css'></i><i class='bx bxl-react'></i><i class='bx bxl-vuejs'></i><i class='bx bxl-firebase'></i>
+            </div>
+            <div class="services-box">
+                <i class='bx bxl-figma'></i>
+                <h3>User Interface Designer</h3>
+                <p>I have a strong user interface design skills, with experience creating intuitive and visually appealing UIs using tools like CSS frameworks such as Tailwind CSS. With tools like Figma, I effectively translate design concepts into functional and responsive web interfaces.</p>
+                <i class='bx bxl-javascript'></i><i class='bx bxl-css3'></i><i class='bx bxl-tailwind-css'></i><i class='bx bxl-figma'></i><i class='bx bxl-react'></i>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="apod-ui.png" alt="project1" />
+                <div class="portfolio-layer">
+                    <h4>Web Development</h4>
+                    <p>Astronomy Picture of the Day</p>
+                    <a href="https://nasa-image-api-react-app.vercel.app/"><i class="bx bx-link-external"></i></a>
+                    <a href="https://github.com/Thami911/nasa-image-api-react-app"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="netflix-ui.png" alt="project1" />
+                <div class="portfolio-layer">
+                    <h4>Web Development</h4>
+                    <p>Netflix Clone Project</p>
+                    <a href="https://react-netflix-c5881.web.app/"><i class="bx bx-link-external"></i></a>
+                    <a href="https://github.com/Thami911/react-netflix"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="react-ui.png" alt="project1" />
+                <div class="portfolio-layer">
+                    <h4>User Interface Design</h4>
+                    <p> GPT User Interface Project</p>
+                    <a href="https://gpt-react-omega.vercel.app/"><i class="bx bx-link-external"></i></a>
+                    <a href="https://github.com/Thami911/gpt-react"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Thami | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="index.js"></script>
+</body>
+</html>
