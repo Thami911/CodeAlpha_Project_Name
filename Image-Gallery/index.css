@@ -81,6 +81,33 @@
     object-fit: cover;
 }
 
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: rgba(255, 255, 255, 0.7) 0.3s;
+    z-index: 101;
+}
+
+#prevBtn {
+    left: 30px;
+}
+
+#nextBtn {
+    right: 30px;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
 @media (max-width: 768px) {
     .gallery-container .image-popup img {
         width: 95%;
